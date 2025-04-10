@@ -3,12 +3,14 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
 
 @media (min-width: 1250px) {
