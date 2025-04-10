@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport"
-    content="width=device-width, initial-scale=1" />
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no" />
 
   <meta name="robots" content="index, impressum, datenschutz, agb, widerrufsrecht" />
   <meta name="keywords"
@@ -26,16 +26,18 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#topbar" data-bs-offset="100" tabindex="0">
-  <button onclick="topFunction()" id="scrollToTopButton" class="btn btn-primary btn-lg bg-starry-blue-3 border-0"><i class="fa-solid fa-angle-up"></i></button>
+  <button onclick="topFunction()" id="scrollToTopButton" class="btn btn-primary btn-lg bg-starry-blue-3 border-0"><i
+      class="fa-solid fa-angle-up"></i></button>
   <header class="sticky-top">
     <nav id="topbar" class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <button class="navbar-toggler bg-starry-blue-3 text-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+        <button class="navbar-toggler bg-starry-blue-3 text-light" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar">
           <i class="fa-bars fa-solid"></i>
         </button>
         <div class="offcanvas offcanvas-end" id="offcanvasNavbar">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menü</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
@@ -70,13 +72,14 @@
             <p class="fs-4 text-secondary">- IHRE VIRTUELLE ASSISTENTIN -</p>
           </div>
           <div class="col-12 col-lg-5 text-center">
-            <img class="img-fluid" src="./resources\media\Logo_Bürofee-Online_blau_70__edited.webp" alt="Logo von buerofee-online"/>
+            <img class="img-fluid" src="./resources\media\Logo_Bürofee-Online_blau_70__edited.webp"
+              alt="Logo von buerofee-online" />
           </div>
         </div>
       </div>
     </section>
     <section id="timelineSection" class="py-5">
-      <ul class="text-secondary mb-5">
+      <ul class="text-secondary mb-5 ps-lg-5 ps-1">
         <li style="--accent-color: #647295">
           <div class="date text-starry-blue-1">Ausbildung</div>
           <div class="descr pt-3">
@@ -331,7 +334,8 @@
           <div class="col-12 col-md-4 col-lg-3 col-xl-2">
             <div class="text-center">
               <a href="#!">
-                <img src="./resources\media\Logo_Bürofee-Online_blau_70__edited.webp" alt="Logo von buerofee-online" class="footer-logo w-50" />
+                <img src="./resources\media\Logo_Bürofee-Online_blau_70__edited.webp" alt="Logo von buerofee-online"
+                  class="footer-logo w-50" />
               </a>
             </div>
           </div>
@@ -413,10 +417,20 @@
       }
     });
     function topFunction() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-        //document.body.scrollTop = 0; // For Safari
-        //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    } 
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      //document.body.scrollTop = 0; // For Safari
+      //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const offcanvasElement = document.getElementById('offcanvasNavbar');
+      const offcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+
+      document.querySelectorAll('#offcanvasNavbar .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          offcanvas.hide();
+        });
+      });
+    });
   </script>
 </body>
 
