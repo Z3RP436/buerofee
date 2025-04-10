@@ -4,6 +4,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 @media (min-width: 1250px) {
@@ -14,11 +15,7 @@ html {
 
 #topbar {
   transition: padding 0.3s ease;
-}
-@media (min-width: 1250px) {
-  #topbar {
-    background: #e1ebfa;
-  }
+  background: #e1ebfa;
 }
 
 #scrollToTopButton {
